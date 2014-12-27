@@ -1,10 +1,41 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 26 déc. 2014, 22:11:52
-    Author     : Ordi
-*/
-
+#menu
+{  /*background-color: rgb(253,57,150);*/
+   background-color: rgb(93,88,94); 
+   width: 1024px;
+   height: 40px;
+   margin: 0px auto;
+}
+/* disparition des puces */
+#menu ul 
+{   color: #667a89;
+    list-style-type: none; 
+}
+/* affichage en ligne */
+#menu li 
+{  float: left; 
+}
+#menu a 
+{  background-color: rgb(93,88,94); 
+    /*background-color: rgb(253,57,150);*/
+   /* formatage du texte */
+   font-weight: bold;
+   font-size: 1em;
+   color: #FFFFFF;
+   text-decoration: none;
+   text-align: center;
+   /* affichage en bloc */
+   display: block;
+   width: 188px;
+   height: 40px;
+   line-height: 2.4em;
+   /*  création d'un trait de séparations  entre les items*/
+   border-left: 1px solid #FFFFFF;
+}
+#borderight
+{  border-right: 1px solid #FFFFFF;}
+/* affichage fleche au survol */
+#menu a:hover 
+{   color: #667a89;
+    background: rgb(195,213,93) url(images/fleche.gif) top center no-repeat;
+    /*background: rgb(169,223,237) url(images/fleche.gif) top center no-repeat;*/
+}
