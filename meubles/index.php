@@ -1,7 +1,7 @@
 <!doctype html>
 <?php
-//include ('./lib/php/Pliste_include.php');
-//$db = Connexion::getInstance($dsn,$user,$pass);
+include ('./lib/php/Pliste_include.php');
+$db = Connexion::getInstance($dsn,$user,$pass);
 session_start();
 $scripts= array();
 $i=0;
