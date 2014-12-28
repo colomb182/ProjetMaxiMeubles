@@ -5,7 +5,7 @@ body{
 }
 
 #menu
-{  /*background-color: rgb(253,57,150);*/
+{  
    background-color: rgb(18,121,190);
    width: 1024px;
    height: 40px;
@@ -21,8 +21,8 @@ body{
 {  float: left; 
 }
 #menu a 
-{   
-   background-color: rgb(18,121,190);
+{ 
+    background-color: rgb(18,121,190);
     /*background-color: rgb(253,57,150);*/
    /* formatage du texte */
    font-weight: bold;
@@ -42,8 +42,7 @@ body{
 {  border-right: 1px solid #FFFFFF;}
 /* affichage fleche au survol */
 #menu a:hover 
-{   //color: #FFFFFF;
-    background: rgb(136,186,69) url(images/fleche.gif) top center no-repeat;
-    //background: rgb(195,213,93) url(images/fleche.gif) top center no-repeat;
-    /*background: rgb(169,223,237) url(images/fleche.gif) top center no-repeat;*/
+{   
+   background: rgb(136,186,69) url(images/fleche.gif) top center no-repeat;
+
 }
