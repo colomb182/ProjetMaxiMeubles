@@ -1,13 +1,3 @@
- Skip to content
-This repository
-
-    Explore
-    Gist
-    Blog
-    Help
-
-    bilgenm bilgenm
-
 <!doctype html>
 <?php
 include ('./lib/php/Pliste_include.php');
@@ -92,4 +82,3 @@ Editeur responsable sitesuperbeaux@condorcet.be
 <script src="../admin/lib/js/bootstrap.min.js"></script>
 </body>
 </html>
-
