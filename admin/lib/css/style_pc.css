@@ -1,5 +1,5 @@
 body{
- background-image: url("image_fond.jpg");
+ background-image: url(".images/crossblue.png");
  background-repeat: no-repeat;  /*pas de répition de l'image*/
  background-attachment: fixed 
 }
