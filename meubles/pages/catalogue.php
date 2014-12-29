@@ -35,7 +35,7 @@ if (isset($_GET['envoi_choix'])) {
         </tr>
     </table>
 </form>
-
+<section id="produit">
 <?php
 if (isset($nbr_meubles)) {
     ?>
@@ -47,7 +47,6 @@ if (isset($nbr_meubles)) {
             <img src="../admin/images/<?php print $meubles[$i]->photop; ?>" alt="<?php print $meubles[$i]->nom_modele; ?>" />
             
         <?php
-         print $meubles[$i]->id_modele;
          print "Prix <strong>".$meubles[$i]->prix."</strong> &nbsp;&euro;";?><br/>
          <a href="index.php?page=meubledesc&amp;descr=<?php print $meubles[$i]->id_modele;?>">D&eacute;tails</a>
         </li>
@@ -59,4 +58,4 @@ if (isset($nbr_meubles)) {
     }
     ?>
 
-
+</section>

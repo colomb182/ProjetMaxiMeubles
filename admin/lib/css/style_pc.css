@@ -100,3 +100,30 @@ footer {
     padding-right:15px;
     padding-top:1%;
 }
+#produit ul
+{  list-style-type : none;
+}
+#produit li
+{  width : 236px;
+   margin : 5px;
+   padding-top : 3px;
+   text-align : center;
+   display : inline-block;
+   background-color :rgb(157,206,255);
+   border : 1px solid rgb(162,162,162);
+	/*border : 1px dotted black;*/	
+}
+#produit a:link
+{  text-decoration : none;	
+}
+#produit li a
+{  color : black;  
+}
+#produit li a:hover
+{  text-decoration: underline;
+}
+#produit li img {
+   width: 220px;
+   height: 200px;
+    
+}

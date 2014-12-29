@@ -20,30 +20,17 @@ class ModeleManager extends Modele {
         }
         return $_modeleArray;
     }
-    
-    public function getListeConfort() {
-        $query="select * from modele order by id_confort";
+    public function getModele($id){
+        $query="select * from modele where id_modele = :id_modele";
         $resultset = $this->_db->prepare($query);
+        $resultset->bindValue(1,$id,PDO::PARAM_INT);
         $resultset->execute();
-        
+       
         $nbr=$resultset->rowCount();
-        while($data = $resultset->fetch()){
+        while($data = $resultset->fetch()) {
             $_modeleArray[] = new Modele($data);
         }
         return $_modeleArray;
-    }
-    
+    }   
 }
-        
-        /*
-           while($data = $resultset->fetch()){            
-            try {
-                $_accueilArray[] = new Accueil($data);
-
-            } catch(PDOException $e) {
-                
-                print $e->getMessage();
-            }            
-        }
-         */
-
+    
