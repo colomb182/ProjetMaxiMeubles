@@ -37,14 +37,14 @@ foreach($scripts as $js) {
 </head>
 <body>
 <section id="page">
-    <section id="rech">
-    <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-    </section>
+<section id="rech">
+<form class="navbar-form navbar-left" role="search">
+<div class="form-group">
+<input type="text" class="form-control" placeholder="Search">
+</div>
+<button type="submit" class="btn btn-default">Submit</button>
+</form>
+</section>
 <header>
 <img src="../admin/images/banniere12.jpg" alt="meubles" />
 </header>
@@ -57,7 +57,6 @@ include ('./lib/php/Pmenu.php');
 ?>
 </nav>
 </section>
-
 <section id="contenu">
 <div id="main">
 <?php
@@ -85,3 +84,6 @@ Editeur responsable sitesuperbeaux@condorcet.be
 <script src="../admin/lib/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+
