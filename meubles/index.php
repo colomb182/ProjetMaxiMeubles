@@ -37,6 +37,14 @@ foreach($scripts as $js) {
 </head>
 <body>
 <section id="page">
+    <section id="rech">
+    <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+    </section>
 <header>
 <img src="../admin/images/banniere12.jpg" alt="meubles" />
 </header>
@@ -49,12 +57,7 @@ include ('./lib/php/Pmenu.php');
 ?>
 </nav>
 </section>
-<form class="navbar-form navbar-left" role="search">
-<div class="form-group">
-<input type="text" class="form-control" placeholder="Search">
-</div>
-<button type="submit" class="btn btn-default">Submit</button>
-</form>
+
 <section id="contenu">
 <div id="main">
 <?php

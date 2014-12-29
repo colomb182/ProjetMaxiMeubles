@@ -1,16 +1,36 @@
-body{
- background: url(../../images/img_fond3.jpg);
-  //background-color: rgb(18,200,190);
-background-repeat: repeat;  /*pas de répition de l'image*/
-background-attachment: fixed 
+body
+{   background-color: rgb(157,206,255);
+    background-repeat: repeat;  /*pas de répition de l'image*/
+    background-attachment: fixed 
 }
 
+#page 
+{   margin:0 auto; 
+    width:90%;
+    max-width:1200px; /* taille du header */
+    min-width:760px;
+
+}
+
+
+header img {
+    width:78.4%;
+    
+}
+
+header {
+    margin:0 auto; text-align:center;
+    max-width:1200px;
+}
+
+
+
 #menu
-{  /*background-color: rgb(253,57,150);*/
+{
    background-color: rgb(18,121,190);
-   width: 1024px;
-   height: 40px;
-   margin: 0px auto;
+   width: 92.3%;
+   height: 40%;
+   margin:0 auto;
 }
 /* disparition des puces */
 #menu ul 
@@ -40,7 +60,8 @@ background-attachment: fixed
    border-left: 1px solid #FFFFFF;
 }
 #borderight
-{  border-right: 1px solid #FFFFFF;}
+{  border-right: 1px solid #FFFFFF;
+}
 /* affichage fleche au survol */
 #menu a:hover 
 {   //color: #FFFFFF;
@@ -49,3 +70,34 @@ background-attachment: fixed
     /*background: rgb(169,223,237) url(images/fleche.gif) top center no-repeat;*/
 }
 
+#rech {
+    background-color:rgb(157,206,255);
+    float:right; 
+    width:35%;
+    
+}
+
+#contenu { 
+    
+    margin:0 auto;
+    width:78.4%;
+    background-color:white;
+}	
+#main {
+    padding-left:1%;
+    padding-right:1%;
+    width:100%;
+    display:inline-block;
+    font-size:110%;
+}
+
+
+footer {
+    clear:both; 
+    color:#333;
+    width:80%;
+    margin:0 auto; 
+    text-align:center;
+    padding-right:15px;
+    padding-top:1%;
+}
