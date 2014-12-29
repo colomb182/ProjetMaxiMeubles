@@ -8,7 +8,7 @@ $nbr = count($liste_der);
 if (isset($_GET['envoi_choix'])) {
     $mg2 = new ModeleManager($db);
     $meubles = $mg2->getListeSelection($_GET['choix']);
-    $nbr_at = count($meubles);
+    $nbr_meubles = count($meubles);
 }
 ?>
 
@@ -37,28 +37,23 @@ if (isset($_GET['envoi_choix'])) {
 </form>
 
 <?php
-if (isset($nbr_at)) {
+if (isset($nbr_meubles)) {
     ?>
-    <table>
+    <ul>
         <?php
-        for ($i = 0; $i < $nbr_at; $i++) {
+        for ($i = 0; $i < $nbr_meubles; $i++) {
             ?>
-            <tr>
-                <td>
-                    <img src="../admin/images/<?php print $meubles[$i]->photo; ?>" alt="<?php print $meubles[$i]->nom_modele; ?>" />
-                </td>
-                <td class="up centrer">
-                    <span class="txtBlue txtGras">
+        <li class="titreproduit"><a href="index.php?page=meubledescr.php&amp;descr=<?php print $meubles[$i]->id_modele;?>"><?php print $meubles[$i]->nom_modele;?> </a>
+            <img src="../admin/images/<?php print $meubles[$i]->photo; ?>" alt="<?php print $meubles[$i]->nom_modele; ?>" />
+            
         <?php
-       print $meubles[$i]->nom_modele . "<br />";
-        ?>  
-                </td>
-            </tr>
+         print "Prix <strong>".$meubles[$i]->prix."</strong> &nbsp;&euro;";?><br/>
+         <a href="index.php?page=meubledescr.php&amp;descr=<?php print $meubles[$i]->id_modele;?>">D&eacute;tails</a>
+        </li>
         <?php
     }
     ?>      
-
-    </table>
+    </ul>
         <?php
     }
     ?>
