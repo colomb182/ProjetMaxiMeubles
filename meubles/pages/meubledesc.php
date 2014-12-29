@@ -2,7 +2,7 @@
 
 if(isset($_GET['descr']))
 {
-   print "essai 1";
+   //print "essai 1";
    print "<br/>".$_GET['descr'];
    $s=$_GET['descr'];
   
