@@ -43,12 +43,13 @@ if (isset($nbr_meubles)) {
         <?php
         for ($i = 0; $i < $nbr_meubles; $i++) {
             ?>
-        <li class="titreproduit"><a href="index.php?page=meubledescr.php&amp;descr=<?php print $meubles[$i]->id_modele;?>"><?php print $meubles[$i]->nom_modele;?> </a>
-            <img src="../admin/images/<?php print $meubles[$i]->photo; ?>" alt="<?php print $meubles[$i]->nom_modele; ?>" />
+        <li class="titreproduit"><a href="index.php?page=meubledesc&amp;descr=<?php print $meubles[$i]->id_modele;?>"><?php print $meubles[$i]->nom_modele;?> </a>
+            <img src="../admin/images/<?php print $meubles[$i]->photop; ?>" alt="<?php print $meubles[$i]->nom_modele; ?>" />
             
         <?php
+         print $meubles[$i]->id_modele;
          print "Prix <strong>".$meubles[$i]->prix."</strong> &nbsp;&euro;";?><br/>
-         <a href="index.php?page=meubledescr.php&amp;descr=<?php print $meubles[$i]->id_modele;?>">D&eacute;tails</a>
+         <a href="index.php?page=meubledesc&amp;descr=<?php print $meubles[$i]->id_modele;?>">D&eacute;tails</a>
         </li>
         <?php
     }
