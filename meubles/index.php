@@ -18,6 +18,7 @@ $i++;
         <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap -->
         <link href="../admin/lib/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="../admin/images/faviconmeuble.ico" />
         <link rel="stylesheet" type="text/css" href="../admin/lib/css/style_pc.css" />
         <link rel="stylesheet" type="text/css" href="../admin/lib/css/mediaqueries.css" />
 <?php
