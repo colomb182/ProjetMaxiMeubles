@@ -1,0 +1,205 @@
+body
+{   background-color: rgb(157,206,255);
+    background-repeat: repeat;  /*pas de répition de l'image*/
+    background-attachment: fixed 
+}
+
+#page 
+{   margin:0 auto; 
+    width:90%;
+    max-width:1000px; /* taille du header */
+    min-width:760px;
+
+}
+header {
+    margin:0 auto; text-align:center;
+    max-width:1000px;
+}
+
+header img {
+    //width:78.4%;
+    width:100%;   
+}
+
+#menu
+{
+   background-color: rgb(18,121,190);
+   width: 1000px;
+   height: 40px;
+   margin: 0px auto;
+}
+/* disparition des puces */
+#menu ul 
+{   color: #667a89;
+    list-style-type: none; 
+}
+/* affichage en ligne */
+#menu li 
+{  float: left;
+}
+#menu a 
+{   
+   background-color: rgb(18,121,190);
+    /*background-color: rgb(253,57,150);*/
+   /* formatage du texte */
+   font-weight: bold;
+   font-size: 1em;
+   color: #FFFFFF;
+   text-decoration: none;
+   text-align: center;
+   /* affichage en bloc */
+   display: block;
+   width: 183px;
+   height: 40px;
+   line-height: 2.4em;
+   /*  création d'un trait de séparations  entre les items*/
+   border-left: 1px solid #FFFFFF;
+}
+#borderight
+{  border-right: 1px solid #FFFFFF;
+}
+/* affichage fleche au survol */
+#menu a:hover 
+{   //color: #FFFFFF;
+    background: rgb(136,186,69) url(../../images/fleche.gif) top center no-repeat;
+    //background: rgb(195,213,93) url(images/fleche.gif) top center no-repeat;
+    /*background: rgb(169,223,237) url(images/fleche.gif) top center no-repeat;*/
+}
+
+#rech {
+    background-color:rgb(157,206,255);
+    float:right; 
+    width:35%;
+    
+}
+
+#contenu { 
+    //display:inline-block;
+    margin:0 auto;
+    width:100%;
+    background-color:white;
+}	
+#main {
+    padding-left:1%;
+    padding-right:1%;
+    width:75%;
+    display:inline-block;
+    font-size:110%;
+    //background-color: red;
+}
+
+
+footer {
+    clear:both; 
+    background-color: rgb(135,181,117);
+    color:#FFFFFF;
+    width:90%;
+    max-width:1000px;
+    min-width:760px;
+    margin:0 auto; 
+    text-align:center;
+    padding-right:15px;
+    padding-top:1%;
+}
+#produit ul
+{  list-style-type : none;
+}
+#produit li
+{  width : 236px;
+   margin : 5px;
+   padding-top : 3px;
+   text-align : center;
+   display : inline-block;
+   background-color :rgb(157,206,255);
+   border : 1px solid rgb(162,162,162);
+	/*border : 1px dotted black;*/	
+}
+#produit a:link
+{  text-decoration : none;	
+}
+#produit li a
+{  color : black;  
+}
+#produit li a:hover
+{  text-decoration: underline;
+}
+#produit li img {
+   width: 220px;
+   height: 200px;
+    
+}
+
+#fiche{
+
+}
+
+#descrip{
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    //margin-right: px;
+    padding-top : 5px;
+    padding-left : 5px;
+    width: 25%;
+    background-color :rgb(247,240,210);
+    float:right;
+}
+
+#imageProd{
+   //text-align: right;
+   display: inline-block;
+   vertical-align: top;
+   margin-left: 70px;
+  
+   width: 300px;
+   height: 420px;
+   
+   width: 40%;
+   float:left;
+}
+
+#titreProd{
+   // background-color :red;
+   text-align: center;
+   font-weight: bold;
+   font-size: 1.5em;
+   color: rgb(28,136,101);
+   width: 40%;
+   //float:left;
+   padding-top : 20px;
+}
+#boutonPan{
+    margin-top: 80px;
+    margin-botttom: 40px;
+    height: 20%;
+    
+}
+
+.lien{
+    position:absolute;
+    top:300px;
+    left:200px;
+}
+
+#descrip imput{
+    text-align: center;
+      float:right;
+    margin-left: 80px;
+}
+
+#info
+{  float : right;
+   width : 20%;
+   display: inline-block;
+   background-color : rgb(96,233,93);
+   margin-top : 40px;
+   margin-right : 10px;
+   margin-bottom : 10px;
+   color : rgb(255,255,255);
+   margin-left : 10px;
+   padding-left: 5px;
+   padding-right: 5px;
+   text-align : justify;
+   font-family:"Times New Roman",Georgia,Serif;
+}
