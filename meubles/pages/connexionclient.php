@@ -8,7 +8,7 @@ if(isset($_POST['submit_login'])) {
         $message="Authentifié!".$client[0]->nom;
         print $client[0]->nom;
         /*ici on fait redirection*/
-        header('Location: http://localhost/ProjetWebTest/meubles/index.php?page=accueil');
+        header('Location: http://localhost/ProjetMaxiMeubles/meubles/index.php?page=accueil');
     } 
     else {
         $message="Données incorrectes";
