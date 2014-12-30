@@ -203,3 +203,27 @@ footer {
    text-align : justify;
    font-family:"Times New Roman",Georgia,Serif;
 }
+/***** Formulaire connexion client *****/
+#login_form {
+    width:50%;
+    background-color: rgb(135,181,117);
+    color:white;
+    padding:10px;
+    border:1px solid #AAA;
+    -moz-border-radius: 10px;
+    -moz-box-shadow: 0 0 10px #aaa;
+    -webkit-border-radius: 10px;
+    -webkit-box-shadow: 0 0 10px #aaa;
+}
+#overlay:target {
+    display:block;
+}
+#form_auth input{
+   color: #000000; 
+}
+
+fieldset#fieldset_login {
+    border:2px solid white;
+    border-radius:8px;
+    padding:50px;
+}

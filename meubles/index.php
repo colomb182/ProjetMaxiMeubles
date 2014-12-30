@@ -67,7 +67,7 @@ foreach($scripts as $js) {
       else{
           echo "un problème technique est survenu";
       } 
-  ?>
+      ?>
        </section>
 
     <section id="contenu">
