@@ -74,7 +74,7 @@ header img {
 }
 
 #contenu { 
-    
+    //display:inline-block;
     margin:0 auto;
     width:100%;
     background-color:white;
@@ -82,9 +82,10 @@ header img {
 #main {
     padding-left:1%;
     padding-right:1%;
-    width:100%;
+    width:75%;
     display:inline-block;
     font-size:110%;
+    //background-color: red;
 }
 
 
@@ -126,4 +127,79 @@ footer {
    width: 220px;
    height: 200px;
     
+}
+
+#fiche{
+
+}
+
+#descrip{
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    //margin-right: px;
+    padding-top : 5px;
+    padding-left : 5px;
+    width: 25%;
+    background-color :rgb(247,240,210);
+    float:right;
+}
+
+#imageProd{
+   //text-align: right;
+   display: inline-block;
+   vertical-align: top;
+   margin-left: 70px;
+  
+   width: 300px;
+   height: 420px;
+   
+   width: 40%;
+   float:left;
+}
+
+#titreProd{
+   // background-color :red;
+   text-align: center;
+   font-weight: bold;
+   font-size: 1.5em;
+   color: rgb(28,136,101);
+   width: 40%;
+   //float:left;
+   padding-top : 20px;
+}
+#boutonPan{
+    margin-top: 80px;
+    margin-botttom: 40px;
+    height: 20%;
+    
+}
+
+.lien{
+    position:absolute;
+    top:300px;
+    left:200px;
+}
+
+#descrip imput{
+    text-align: center;
+      float:right;
+    margin-left: 80px;
+}
+
+#info
+{  float : right;
+   width : 20%;
+   display: inline-block;
+   background-color : rgb(96,233,93);
+   margin-top : 40px;
+   margin-right : 10px;
+   margin-bottom : 10px;
+   color : rgb(255,255,255);
+   margin-left : 10px;
+   padding-left: 5px;
+   padding-right: 5px;
+   text-align : justify;
+   font-family:"Times New Roman",Georgia,Serif;
 }
