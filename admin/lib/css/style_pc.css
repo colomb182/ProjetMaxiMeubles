@@ -77,6 +77,7 @@ header img {
     //display:inline-block;
     margin:0 auto;
     width:100%;
+    min-height:400px;
     background-color:white;
 }	
 #main {
@@ -85,7 +86,7 @@ header img {
     width:75%;
     display:inline-block;
     font-size:110%;
-    //background-color: red;
+    
 }
 
 
@@ -191,7 +192,7 @@ footer {
 #info
 {  float : right;
    width : 20%;
-   //height:50%;
+   height:50%;
    display: inline-block;
    background-color : rgb(96,233,93);
    margin-top : 40px;

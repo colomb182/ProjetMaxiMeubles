@@ -58,8 +58,15 @@ foreach (glob('../admin/lib/js/jquery/*.js') as $js) {
                     ?>
                 </nav>
             </section>
-
-
+            <section id="info">
+                <?php
+                if (file_exists('./pages/info.php')) {
+                    include './pages/info.php';
+                } else {
+                    echo "un problème technique est survenu";
+                }
+                ?>
+            </section>
             <section id="contenu">
                 <div id="main">
                     <?php
