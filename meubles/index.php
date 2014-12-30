@@ -58,34 +58,34 @@ foreach (glob('../admin/lib/js/jquery/*.js') as $js) {
                     ?>
                 </nav>
             </section>
-        
-        
-        <section id="contenu">
-            <div id="main">
-                <?php
-                //quand on arrive sur le site
-                if (!isset($_SESSION['page'])) {
-                    $_SESSION['page'] = "accueil";
-                } //si on a cliqué sur un lien du menu
-                if (isset($_GET['page'])) {
-                    $_SESSION['page'] = $_GET['page'];
-                }
-                $_SESSION['page'] = $_SESSION['page'];
-                if (file_exists('./pages/' . $_SESSION['page'] . '.php')) {
-                    include ('./pages/' . $_SESSION['page'] . '.php');
-                }
-                ?>
-            </div>
+
+
+            <section id="contenu">
+                <div id="main">
+                    <?php
+                    //quand on arrive sur le site
+                    if (!isset($_SESSION['page'])) {
+                        $_SESSION['page'] = "accueil";
+                    } //si on a cliqué sur un lien du menu
+                    if (isset($_GET['page'])) {
+                        $_SESSION['page'] = $_GET['page'];
+                    }
+                    $_SESSION['page'] = $_SESSION['page'];
+                    if (file_exists('./pages/' . $_SESSION['page'] . '.php')) {
+                        include ('./pages/' . $_SESSION['page'] . '.php');
+                    }
+                    ?>
+                </div>
+            </section>
         </section>
-    </section>
-    <footer>
-        Editeur responsable sitesuperbeaux@condorcet.be
-    </footer>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../admin/lib/js/bootstrap.min.js"></script>
-</body>
+        <footer>
+            Editeur responsable sitesuperbeaux@condorcet.be
+        </footer>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="../admin/lib/js/bootstrap.min.js"></script>
+    </body>
 </html>
 
 
