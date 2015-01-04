@@ -85,8 +85,17 @@ foreach (glob('../admin/lib/js/jquery/*.js') as $js) {
                 </div>
             </section>
         </section>
-        <footer>
-            Editeur responsable sitesuperbeaux@condorcet.be
+        <footer id="menu_footer">
+            <nav>
+                <?php
+                if (file_exists('./lib/php/menu_footer.php')) {
+                    include './lib/php/menu_footer.php';
+                } else {
+                    echo "un problème technique est survenu";
+                }
+                ?>
+            </nav>
+
         </footer>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
