@@ -276,3 +276,19 @@ footer {
 #bordure_droite 
 {  border-right: 1px solid #FFFFFF;
 }
+
+#menu_admin a {
+    text-decoration:none; 
+}
+#menu_admin a:hover{
+    color:white;
+    background-color:blue;	
+}
+#menu_admin ul {
+    padding-left:20%;
+}
+
+#menu_admin li {
+    list-style-type:none;
+    text-align:left;
+}
