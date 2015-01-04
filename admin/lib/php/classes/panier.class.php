@@ -1,5 +1,4 @@
 <?php
-
 class Panier {
     private $_attributs = array();
     
