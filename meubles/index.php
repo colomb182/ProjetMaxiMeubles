@@ -38,15 +38,16 @@ foreach (glob('../admin/lib/js/jquery/*.js') as $js) {
     </head>
     <body>
         <section id="page">
-            <section id="rech">
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-            </section>
+
             <header>
+                <section id="rech">
+                    <form action="<?php print $_SERVER['PHP_SELF']; ?>?page=recherche" method="post" class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search" name="motrech">
+                        </div>
+                        <button type="submit" class="btn btn-default">Recherche</button>
+                    </form>
+                </section>
                 <img src="../admin/images/banniere12.jpg" alt="meubles" />
             </header>
             <section id="menu">
