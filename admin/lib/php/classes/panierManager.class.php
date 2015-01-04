@@ -55,6 +55,37 @@ class PanierManager extends Panier {
             return $retour;
         }
     }
+    public function updatePanier($idcli, $idmodele, $qtte) {
+        $query = "select update_panier(:id_client,:id_modele,:quantiteprod) as retour";
+        try {
+            $statement = $this->_db->prepare($query);
+            $statement->bindValue(1, $idcli, PDO::PARAM_INT);
+            $statement->bindValue(2, $idmodele, PDO::PARAM_INT);
+            $statement->bindValue(3, $qtte, PDO::PARAM_INT);
+            $statement->execute();
+            $retour = $statement->fetchColumn(0);
+            return $retour;
+        } catch (PDOException $e) {
+            print "Echec de l'insertion : " . $e;
+            $retour = 0;
+            return $retour;
+        }
+    }
+    public function suppPanierCli($idcli) {
+        $query = "select supp_paniercli(:id_client) as retour";
+        try {
+            $statement = $this->_db->prepare($query);
+            $statement->bindValue(1, $idcli, PDO::PARAM_INT);
+            $statement->execute();
+            $retour = $statement->fetchColumn(0);
+            return $retour;
+        } catch (PDOException $e) {
+            print "Echec de l'insertion : " . $e;
+            $retour = 0;
+            return $retour;
+        }
+         
+    }
 
     public function suppLignePanier($idcli, $idmodele) {
         //var_dump($data);
@@ -72,5 +103,6 @@ class PanierManager extends Panier {
             return $retour;
         }
     }
+    
 
 }
