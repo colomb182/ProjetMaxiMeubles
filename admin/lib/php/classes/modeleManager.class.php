@@ -20,7 +20,7 @@ class ModeleManager extends Modele {
         }
         return $_modeleArray;
     }
-    public function getModele($id){
+    /* public function getModele($id){
         $query="select * from modele where id_modele = :id_modele";
         $resultset = $this->_db->prepare($query);
         $resultset->bindValue(1,$id,PDO::PARAM_INT);
@@ -31,6 +31,15 @@ class ModeleManager extends Modele {
             $_modeleArray[] = new Modele($data);
         }
         return $_modeleArray;
-    }   
+    } */
+    public function getModele($id) {
+        $query = "select * from modele where id_modele = :id_modele";
+        $resultset = $this->_db->prepare($query);
+        $resultset->bindValue(1, $id, PDO::PARAM_INT);
+        $resultset->execute();
+        $data = $resultset->fetch();
+        $_modeleArray[] = new Modele($data);
+        return $_modeleArray;
+    }
 }
     

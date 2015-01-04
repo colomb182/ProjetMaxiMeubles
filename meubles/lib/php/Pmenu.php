@@ -2,7 +2,7 @@
 <li><a href="index.php?page=accueil">Accueil</a></li>
 <li> <a href="index.php?page=catalogue">Catalogue</a></li>
 <li> <a href="#">Magasins</a></li>
-<li> <a href="#">Panier</a></li>
+<li> <a href="index.php?page=panier">Panier</a></li>
 <?php
     if(isset($_SESSION['client'])){
 ?>

@@ -26,6 +26,7 @@ $mg2 = new PanierManager($db);
 $verifretour= $mg2->verifListeProduit($_SESSION['client']);
 if($verifretour>0){
 $listeproduits = $mg2->getListeProduits($_SESSION['client']);
+var_dump($listeproduits);
 $mod = new ModeleManager($db);
 $totaux=array();
 ?>
@@ -49,13 +50,13 @@ for ($i = 0; $i < count($listeproduits); $i++) {
     ?>
         <tr>
             <td >
-                <img src="../admin/images/<?php print $modele[$i]->photop; ?>" alt="<?php print $modele[$i]->nom_modele;?>"style="width:100px;height:100px;"/>
+                <img src="../admin/images/<?php print $modele[0]->photop; ?>" alt="<?php print $modele[0]->nom_modele;?>"style="width:100px;height:100px;"/>
             </td>
             <td>
-                <?php print $modele[$i]->nom_modele;?>
+                <?php print $modele[0]->nom_modele;?>
             </td>
             <td>
-                <?php print $modele[$i]->prix;?>&nbsp;&euro;
+                <?php print $modele[0]->prix;?>&nbsp;&euro;
             </td>
                  
             <td>
@@ -63,13 +64,13 @@ for ($i = 0; $i < count($listeproduits); $i++) {
             </td>
             <td>
                 <?php
-                $total=$modele[$i]->prix*$listeproduits[$i]->quantiteprod;
+                $total=$modele[0]->prix*$listeproduits[$i]->quantiteprod;
                 $totaux[$i]=$total;
                 print $total."&nbsp;&euro;";
                 ?>
                 
             </td>
-            <td> <a href="index.php?page=panier&amp;idmeubdel=<?php print $modele[$i]->id_modele; ?>">
+            <td> <a href="index.php?page=panier&amp;idmeubdel=<?php print $modele[0]->id_modele; ?>">
                     <img src="../admin/images/trash.png" alt="trash"/>
                 </a>
             </td>
