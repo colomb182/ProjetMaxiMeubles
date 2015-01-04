@@ -1,4 +1,5 @@
 <?php
+
 class Panier {
     private $_attributs = array();
     
@@ -21,6 +22,6 @@ class Panier {
     
     public function __set($key, $value) {
         $this->_attributs[$key]=$value;
-      // =  _attributs['nom']="Arthur";
     }
+  
 }
