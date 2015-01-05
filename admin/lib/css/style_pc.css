@@ -277,6 +277,7 @@ footer {
 {  border-right: 1px solid #FFFFFF;
 }
 
+/***** Menu administrateur *****/
 #menu_admin a {
     text-decoration:none; 
 }
@@ -291,4 +292,11 @@ footer {
 #menu_admin li {
     list-style-type:none;
     text-align:left;
+}
+
+#tables_pan_com{
+    
+    text-align:center;
+    border-color: rgb(125,216,255);
+    border: 1px;
 }
