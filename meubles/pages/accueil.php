@@ -1,4 +1,4 @@
-<h1>Page d'accueil</h1>
+<h1>Accueil</h1>
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
