@@ -1,27 +1,11 @@
 <?php
 
-$mg = new PanierManager($db);
-if (isset($_GET['idmeuble'])) {
-    $s = $_GET['idmeuble'];
-}
-if (isset($_POST['idmeuble'])) {
-    $s = $_POST['idmeuble'];
-}
-if (isset($_GET['idmeubdel'])) {
-    $del = $_GET['idmeubdel'];
-    $retour2=$mg->suppLignePanier($_SESSION['client'],$del);
-}
+
+$mg = new CommandeManager($db);
+
 if (isset($s) && isset($_SESSION['client'])) {
     print $s;
-    
-    $retour = $mg->addLignePanier($_SESSION['client'], $s, 1);
-    if ($retour == 1) {
-        
-    } else if ($retour == 2) {
-        
-    } else {
-        $message = "pas ajouté";
-    }
+
 }
 $mg2 = new PanierManager($db);
 $verifretour= $mg2->verifListeProduit($_SESSION['client']);
@@ -32,19 +16,18 @@ $mod = new ModeleManager($db);
 $totaux=array();
 ?>
 
-    <section id="message"><?php if (isset($message)) print $message; ?></section>
-    <section class="form_pan" >
+<section class="forms_comm" >
     <table border="1">
         <tr>
-            <td colspan="6">Votre panier</td>
+            <td colspan="6"><strong>Résumé de votre commande</strong></td>
         </tr>
         <tr>
-            <th>Photo</th>
-            <th>Modèle</th>
-            <th>Prix</th>
+            <th></th>
+            <th></th>
             <th>Quantité</th>
+            <th>Prix par pièce</th>
             <th>Total</th>
-            <th>Action</th>
+            
         </tr>
 <?php
 for ($i = 0; $i < count($listeproduits); $i++) {
@@ -55,14 +38,19 @@ for ($i = 0; $i < count($listeproduits); $i++) {
                 <img src="../admin/images/<?php print $modele[0]->photop; ?>" alt="<?php print $modele[0]->nom_modele;?>"style="width:100px;height:100px;"/>
             </td>
             <td>
-                <?php print $modele[0]->nom_modele;?>
+                <?php print "<strong>".$modele[0]->nom_modele."</strong>";?></br>
+                <?php print $modele[0]->desc_modele;?></br>
+                <?php $idCouleur= $modele[0]->id_couleur;
+                      $mg3=new CouleurManager($db);
+                      $couleur=$mg3->getCouleur($idCouleur);
+                      print "Couleur: ".$couleur[0]->couleur;?></br>
+                      
+            </td>
+             <td>
+                <?php print $listeproduits[$i]->quantiteprod;?>
             </td>
             <td>
                 <?php print $modele[0]->prix;?>&nbsp;&euro;
-            </td>
-                 
-            <td>
-                <?php print $listeproduits[$i]->quantiteprod;?>
             </td>
             <td>
                 <?php
@@ -72,17 +60,14 @@ for ($i = 0; $i < count($listeproduits); $i++) {
                 ?>
                 
             </td>
-            <td> <a href="index.php?page=panier&amp;idmeubdel=<?php print $modele[0]->id_modele; ?>">
-                    <img src="../admin/images/trash.png" alt="trash"/>
-                </a>
-            </td>
+           
         </tr>
     <?php
 }
 ?>
         <tr>
-            <td colspan="4"></td>
-            <td>Total:</td>
+            <td colspan="3"></td>
+            <td><strong>Total</strong></td>
             <td>
                 <?php 
                 $prixtotal=0;
@@ -95,13 +80,13 @@ for ($i = 0; $i < count($listeproduits); $i++) {
             
         </tr>
     </table>
-        
-    
-    
-    <form id="bt_pan" method="post" action="<?php print $_SERVER['PHP_SELF'];?>?page=commander" style="text-align:center" >
-        <button type="submit" class="btn btn-success" >Commander</button>
+   
+    <form method="post" action="<?php print $_SERVER['PHP_SELF'];?>?page=panier" style="text-align:center" >
+        <button type="submit" class="btn btn-success" >Modifier</button>
     </form>
-    </section>
+     <form method="post" action="<?php print $_SERVER['PHP_SELF'];?>?page=donneesclicom" style="text-align:center" >
+        <button type="submit" class="btn btn-success" >Suivant</button>
+    </form>
 <?php 
 }
 else {
@@ -113,6 +98,8 @@ else {
 <?php
 }
 ?>
+
+</section>
 
 
 

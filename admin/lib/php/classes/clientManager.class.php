@@ -2,6 +2,7 @@
 class ClientManager extends Client {
     private $_db;
     private $_clientArray=array();
+    //private $_clientArray2=array();
     
     public function __construct($db) {
         $this->_db = $db;      
@@ -14,8 +15,18 @@ class ClientManager extends Client {
         $resultset->execute();
         $nbr=$resultset->rowCount();
         while($data = $resultset->fetch()) {
-            $_clientArray[] = new Modele($data);
+            $_clientArray[] = new Client($data);
         }
+        return $_clientArray;
+    }
+    
+     public function getClientId($id){
+        $query="select * from client where id_client = :id_client";
+        $resultset = $this->_db->prepare($query);
+        $resultset->bindValue(1,$id,PDO::PARAM_INT);
+        $resultset->execute();
+        $data=$resultset->fetch();
+        $_clientArray[] = new Client($data);
         return $_clientArray;
     }
     public function isClient($login,$password) {
