@@ -4,29 +4,65 @@
 	min-width:320px;
 }
 
-#haut {
-	float:left; 
-	width:100%;
-	//margin-top:2%; 
-}	
-
-#menu {
-	
-    
-   
-    float:left;
-    width:50%; /* du parent */
-}
-
-#menu li 
-{  float: left; 
-   width:25%;
-}
-
 #contenu {
-	width:100%;
+   clear:both;
+   width:100%;
+}
+header {
+   width:100%;
+}
+#menu
+{
+   clear:both;
+   width: 100%;
+   
+}
+#main {
+    clear:both;
+    width: 100%; 
+}
+#produit
+{  clear:both;
+   width: 70%;
+}
+#produit li a
+{  clear:both;
+    width:20%;	
+}
+#produit li
+{  clear:both;
+   width : 20%;	
+}
+#produit ul
+{  
+   width : 100%;
+   clear:both;	
+}
+#produit li img {
+   width: 5%;
+   height: 5%;
+    
+}
+#info
+{  float : left;
+   width : 80%;
+   height:20%;
+}
+footer{
+    clear:both; 
+    width:65%;
+    font-size: 70%;
+}
+#menu_footer ul
+{  clear:both;
+   width: 70%;
+}
+#menu_footer ul li
+{ font-size: 70%;
+}
+#menu_footer ul li a
+{  clear:both;
+   width: 70%;     
 }
 
-#chenil_img {
-    max-width:50%;
-}
+

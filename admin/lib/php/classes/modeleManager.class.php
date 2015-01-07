@@ -55,6 +55,24 @@ class ModeleManager extends Modele {
         $_modeleArray[] = new Modele($data);
         return $_modeleArray;
     }
+     public function getListeModelePage($idcat,$nbreModele,$debut){
+        $query="select * from modele where id_cat=:idcat order by id_modele asc LIMIT :limit offset :debut";
+        $resultset = $this->_db->prepare($query);
+        $resultset->bindValue(1,$idcat,PDO::PARAM_INT);
+        $resultset->bindValue(2,$nbreModele,PDO::PARAM_INT);
+        $resultset->bindValue(3,$debut,PDO::PARAM_INT);
+        try {
+        $resultset->execute();
+        } catch (PDOException $e) {
+            print "Echec de l'insertion : " . $e;
+        }
+        $nbr=$resultset->rowCount();
+        while($data = $resultset->fetch()) {
+            $_modeleArray[] = new Modele($data);
+        }
+        return $_modeleArray;
+    }
+
     
     public function getListeRechModele($motcle) {
         try {
