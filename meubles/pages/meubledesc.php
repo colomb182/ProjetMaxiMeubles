@@ -41,8 +41,13 @@ if (isset($idModele)) {
             <?php
         }
         print "<strong>Description: </strong></br>" . $meuble[0]->desc_modele;
-        ?></br></br>
-        <a href="index.php?page=panier&amp;idmeuble=<?php print $meuble[0]->id_modele; ?>">  <img src="../admin/images/shoppingcart.png" alt="trash"/></a> 
+        ?></br></br> 
+        <?php 
+        if(isset($_SESSION['client'])){
+        ?><a href="index.php?page=panier&amp;idmeuble=<?php print $meuble[0]->id_modele; ?>" class="addPanier">  <img src="../admin/images/shoppingcart.png" alt="shoppingcart"/></a> 
+        <?php
+        }
+        ?> 
     </section>           
     <?php
 }
