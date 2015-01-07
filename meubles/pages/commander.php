@@ -1,6 +1,4 @@
 <?php
-
-
 $mg = new CommandeManager($db);
 
 if (isset($s) && isset($_SESSION['client'])) {
@@ -100,6 +98,10 @@ else {
 ?>
 
 </section>
+
+
+
+
 
 
 

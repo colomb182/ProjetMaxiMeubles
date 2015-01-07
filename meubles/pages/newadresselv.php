@@ -1,6 +1,5 @@
 
-
-<script type="text/javascript">
+ <script type="text/javascript">
   function verifform(){
       if(document.formulaire.rue.value===""){
           alert("Veuillez entrer la rue!");
@@ -36,6 +35,8 @@
  </script>
  
 <?php
+ $mgcl=new ClientManager($db);
+ $client= $mgcl->getClientId($_SESSION['client']);
 $erreur=0;
 if(isset($_POST['confirmcom'])) {   
     extract($_POST,EXTR_OVERWRITE);
@@ -44,15 +45,14 @@ if(isset($_POST['confirmcom'])) {
         if($idpays!=0){
             $mg2=new VilleManager($db);
             $idville=$mg2->addVille($idpays, $codepostal, $localite);
-            //print $retour2;
             if($idville!=0){
                 $mg3=new AdresselivrManager($db);
                 $idadrl=$mg3->addAdresseLivr($idville, $rue, $numero);
-               if($idarl!=0){
-                   $_SESSION['adressliv']=$idadrl;
+               if($idadrl!=0){
+                  $erreur=0;
                }
                 else{
-                    $erreur=1;//print $idadrl;
+                    $erreur=1;
                 }
             }
             else{
@@ -62,10 +62,31 @@ if(isset($_POST['confirmcom'])) {
         else{
             $erreur=1;
         }
-        if ($erreur==1){
-            print "un problème est survenu";
-        } 
- header('Location: http://localhost/ProjetMaxiMeubles/meubles/index.php?page=confirmcommande');
+        
+        if ($erreur != 1) {
+           
+            $mg4 = new LivrerManager($db);
+            $livrer = $mg4->addAdresseLivr($client[0]->id_client, $idadrlv);
+            $mgpanier = new PanierManager($db);
+            $listeprod = $mgpanier->getListeProduits($client[0]->id_client);
+            $mgcom = new CommandeManager($db);
+            $idcom = $mgcom->addCommande($client[0]->id_client, $idadrlv, 'Commande');
+            $mgmodele = new ModeleManager($db);
+            $mgcomporte = new ComporteManager($db);
+            $totalcom = 0;
+            for ($i = 0; $i < count($listeprod); $i++) {
+                $modele = $mgmodele->getModele($listeprod[$i]->id_modele);
+                $lignecomp = $mgcomporte->addLigneComp($idcom, $modele[0]->id_modele, $listeprod[$i]->quantiteprod, $modele[0]->prix);
+
+                $totalcom+=$modele[0]->prix * $listeprod[$i]->quantiteprod;
+                
+            }
+            $majcom = $mgcom->updatePrixCom($idcom, $totalcom);
+            $majpancli = $mgpanier->suppPanierCli($client[0]->id_client);
+        }
+        
+        header('Location: http://localhost/TestProjetWeb/TestProjetWeb/meubles/index.php?page=confirmcommande');
+ 
       
  }
  ?>
