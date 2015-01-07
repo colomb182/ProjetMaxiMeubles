@@ -183,9 +183,9 @@ header img {
 {  float : right;
    width : 20%;
    height:50%;
+   margin-top: 10%;
    display: inline-block;
    background-color : rgb(184,225,239);
-   margin-top : 30px;
    margin-right : 10px;
    margin-bottom : 10px;
    color : black;
@@ -407,4 +407,33 @@ footer{
 #lieninscrip a:hover
 {  text-decoration: underline;
    color:#FFFFFF;
+}
+#inscripcli{
+    width:47%;
+    display: inline-block;
+    background-color: rgb(217,232,210);
+    vertical-align: top;
+    margin-top: 5%;
+    margin-left:2%;
+}
+
+#inscripcli button{
+    margin-top:10px;
+    margin-left:35%;
+}
+#inscripcli td{
+    padding:6px 8px;
+}
+#inscripcli th{
+    padding:6px 8px;
+    color: rgb(65,97,50);
+}
+#titreinscrip{
+    margin-top: 10%;
+    font-family:arial, sans-serif;
+    font-size:110%;
+}
+.txtRouge {
+    color: red;
+    font-size:110%;
 }
