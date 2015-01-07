@@ -1,12 +1,12 @@
-<h2>D&eacute;couvrez nos cat&eacute;gories</h2>
+<h2>Découvrez nos catégories</h2>
 <p style="text-align: center;">
     Imprimer le catalogue ici
-    <a href="./pages/print_meubles.php" target="_blank"><img src="../admin/images/pdficon.png" alt="pdf"/></a>
+    
+    <a href="./pages/print_meubles.php"><img src="../admin/images/pdficon.png" alt="pdf"/></a>
 </p>
 <?php
 $mg = new CategorieManager($db);
 $liste_der = $mg->getListeCategorie();
-//nombre d'élt du tableau de resultset
 $nbr = count($liste_der);
 
 if (isset($_GET['envoi_choix'])) {

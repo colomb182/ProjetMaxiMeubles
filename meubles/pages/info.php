@@ -5,9 +5,9 @@
    Vous trouverez des salles à manger, 
    des chambres à coucher, des bureaux et salons en grande quantité; 
    vous trouverez forcément ce qui vous plaît.
-   Parcourez notre gamme pour découvrir notre très large sélection de meubles.</br> 
+   Parcourez notre gamme pour découvrir notre très large sélection de meubles.<br/> 
    L'équipe MaxiMeubles</p>
-<h4>Notre webshop est</br>toujours ouvert!</h4>
+<h4>Notre webshop est<br/>toujours ouvert!</h4>
 
 <p>24 heures sur 24
     et 7 jours sur 7!</p>

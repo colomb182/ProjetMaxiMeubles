@@ -6,10 +6,9 @@ $m=26;
 $mg=new ClientManager($db);
 $mg2=new AdresselivrManager($db);
 $client= $mg->getClientId($_SESSION['client']);
-print $_SESSION['client'];
-$m=
+//print $_SESSION['client'];
 $adresseliv=$mg2->getAdresseLivre($_SESSION['adressliv']);
-print $adresseliv[0]->id_adresseliv;
+//print $adresseliv[0]->id_adresseliv;
 
    /* if(isset($_POST['confirmcom'])){
      print $m;

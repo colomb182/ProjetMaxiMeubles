@@ -51,7 +51,7 @@ class PanierManager extends Panier {
             $retour = $statement->fetchColumn(0);
             return $retour;
         } catch (PDOException $e) {
-            print "Echec de l'insertion : " . $e;
+            //print "Echec de l'insertion : " . $e;
             $retour = 0;
             return $retour;
         }
@@ -74,6 +74,22 @@ class PanierManager extends Panier {
         }
     }
 
+    public function suppMeuble($idcli, $idmodele, $qtte) {
+        $query = "select supp_meuble(:id_client,:id_modele,:quantiteprod) as retour";
+        try {
+            $statement = $this->_db->prepare($query);
+            $statement->bindValue(1, $idcli, PDO::PARAM_INT);
+            $statement->bindValue(2, $idmodele, PDO::PARAM_INT);
+            $statement->bindValue(3, $qtte, PDO::PARAM_INT);
+            $statement->execute();
+            $retour = $statement->fetchColumn(0);
+            return $retour;
+        } catch (PDOException $e) {
+            print "Echec de l'insertion : " . $e;
+            $retour = 0;
+            return $retour;
+        }
+    }
     public function suppPanierCli($idcli) {
         $query = "select supp_paniercli(:id_client) as retour";
         try {

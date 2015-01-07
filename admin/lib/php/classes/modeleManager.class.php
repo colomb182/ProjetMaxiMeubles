@@ -21,6 +21,17 @@ class ModeleManager extends Modele {
         }
         return $_modeleArray;
     }
+    public function getListeModele() {
+        $query = "select * from modele";
+        $resultset = $this->_db->prepare($query);
+        $resultset->execute();
+
+        $nbr = $resultset->rowCount();
+        while ($data = $resultset->fetch()) {
+            $_modeleArray[] = new Modele($data);
+        }
+        return $_modeleArray;
+    }
 
     /* public function getModele($id){
       $query="select * from modele where id_modele = :id_modele";

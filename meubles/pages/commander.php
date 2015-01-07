@@ -4,7 +4,7 @@
 $mg = new CommandeManager($db);
 
 if (isset($s) && isset($_SESSION['client'])) {
-    print $s;
+    //print $s;
 
 }
 $mg2 = new PanierManager($db);

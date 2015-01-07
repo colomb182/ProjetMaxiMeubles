@@ -45,6 +45,28 @@ class ClientManager extends Client {
         }
         return $retour;
     }
+    public function addClient($idville,array $data) {
+        $query="select add_client(:nom_maitre,:email_maitre,:date_debut,:nombre_jours,:type_animal,:nom_animal,:id_jouet_pet,:regime) as retour" ;
+        try {
+            $id=null;
+            $statement = $this->_db->prepare($query);		
+            $statement->bindValue(1, $idville, PDO::PARAM_INT);
+            $statement->bindValue(2, $data['nom'], PDO::PARAM_STR);
+            $statement->bindValue(3, $data['prenom'], PDO::PARAM_STR);
+            $statement->bindValue(4, $data['rue'], PDO::PARAM_STR);
+            $statement->bindValue(5, $data['num'], PDO::PARAM_INT);
+            $statement->bindValue(6, $data['tel'], PDO::PARAM_STR);
+            $statement->bindValue(7, $data['email'], PDO::PARAM_STR);
+            $statement->bindValue(8, $data['pass'], PDO::PARAM_STR);
+            $statement->execute();
+            $retour = $statement->fetchColumn(0);
+            return $retour;
+        } catch (PDOException $e) {
+            print "Echec de l'insertion : " . $e;
+            $retour = 0;
+            return $retour;
+        }
+    }
 }
 
 
