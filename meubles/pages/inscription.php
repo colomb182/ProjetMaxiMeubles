@@ -71,7 +71,7 @@ if (isset($_POST['inscription'])) {
         ?>   
         <script>alert("Inscription réussie!");</script>
          <?php    
-         header('Location: http://localhost/ProjetWebTest/meubles/index.php?page=connexionclient');
+         header('Location: http://localhost/ProjetMaxiMeubles/meubles/index.php?page=connexionclient');
             
         }
     }
