@@ -1,3 +1,20 @@
+<script  type="text/javascript">
+function validateForm() {
+    var x = document.forms["myForm"]["login"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Adresse e-mail non valide!");
+        return false;
+    }
+    else if(document.myForm.password.value==""){
+          alert("Veuillez entrer votre mot de passe!");
+           return false;
+          document.formulaire.password.focus();
+     }
+     else return true;
+}
+</script>
 <?php
 if(isset($_POST['submit_login'])) {
     $mg = new ClientManager($db);
@@ -18,7 +35,7 @@ if(isset($_POST['submit_login'])) {
 <section id="login_form">
 <section id="message"><?php if(isset($message)) print $message;?></section>
 <fieldset id="fieldset_login">
-    <form action="<?php print $_SERVER['PHP_SELF']; ?>" method='post' id="form_auth">
+    <form action="<?php print $_SERVER['PHP_SELF']; ?>" method='post' id="form_auth" name="myForm" onsubmit="return validateForm()">
         <table>
             <tr>
                 <td>E-mail:<?php //print " session : ".$_SESSION['admin'];?></td>
