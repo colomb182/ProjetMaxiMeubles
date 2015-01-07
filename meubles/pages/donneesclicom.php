@@ -41,10 +41,10 @@ if (isset($_SESSION['client'])) {
             $majpancli = $mgpanier->suppPanierCli($client[0]->id_client);
         }
 
-        header('Location: http://localhost/TestProjetWeb/TestProjetWeb/meubles/index.php?page=confirmcommande');
+        header('Location: http://localhost/ProjetMaxiMeubles/meubles/index.php?page=confirmcommande');
     }
     if (isset($_POST['adresslivrautre'])) {
-        header('Location: http://localhost/TestProjetWeb/TestProjetWeb/meubles/index.php?page=newadresselv');
+        header('Location: http://localhost/ProjetMaxiMeubles/meubles/index.php?page=newadresselv');
     }
     ?>
 
